@@ -29,6 +29,19 @@ void InsertContact(){
     printf("회원정보 등록 완료\n");
 }
 
+void SearchContact(){
+    char str[30];
+    printf("검색할 이름 입력 : ");
+    scanf("%s",str);
+    for(int i=0;i<idx;i++){
+        if(strcmp(arr[i].name,str) == 0){
+            printf("%s %s\n",arr[i].name, arr[i].num);  
+            return;
+        }
+    }
+    printf("검색 결과가 없습니다.\n");
+}
+
 
 int main(void){
     int no = -1;
