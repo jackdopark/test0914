@@ -56,6 +56,24 @@ void DeleteContact(){
     printf("삭제할 데이터가 없습니다.\n");
 }
 
+void UpdateContact(){
+    char str[30];
+    printf("수정할 이름 입력 : ");
+    scanf("%s",str);
+    for(int i=0;i<idx;i++){
+        if(strcmp(arr[i].name,str) == 0){
+            i;
+            printf("번호 입력 : ");
+            scanf(" %s",arr[i].num);
+            printf("수정이 완료되었습니다.\n");
+        }else{
+            printf("검색 결과가 없습니다.\n");
+        }
+    }
+   
+    
+}
+
 int main(void){
     int no = -1;
 
